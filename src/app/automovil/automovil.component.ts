@@ -24,13 +24,14 @@ export class AutomovilComponent {
   get mecanicosACargo() {
 
     return this.automovilForm.get('mecanicosACargo') as FormArray;
-  }
+  };
 
   agregarMecanico(){
     this.mecanicosACargo.push(this.fb.control(''));
-  }
+  };
 
   submit() {
+
     this.automovilForm.setValue({
       marca: 'Volskwagen',
       año: 2015,
@@ -42,8 +43,6 @@ export class AutomovilComponent {
     })
 
     this.automovilForm.patchValue({año:2016});
-  }
-
-  
+  };
 
 }

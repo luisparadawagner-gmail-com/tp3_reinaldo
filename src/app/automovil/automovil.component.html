@@ -1,1 +1,35 @@
 <p>automovil works!</p>
+<form [formGroup]='automovilForm' (ngSubmit)=submit()>
+
+    <div class="datosAutomovil">
+        <label>Marca 
+            <input type="text" formControlName="marca">
+        </label>
+        <label>Año 
+            <input type="text" formControlName="año">
+        </label>
+    </div>
+
+    <div formGroupName="datosTecnicos" class="datosTecnicos">
+        <h3>Datos Tecnicos</h3>
+        <label>Funcionando
+            <input type="text" formControlName="enMarcha">
+        </label>
+        <label> Ultimo Servicio 
+            <input type ="text" formControlName="ultimoServicio">
+        </label>
+    </div>
+
+    <div formArrayName="mecanicosACargo">
+        <h3>Mecanicos a cargo del Servicio</h3>
+        <div *ngFor="let mecanico of mecanicosACargo.controls; let i = index" class="mecanicosACargo">
+            <label>
+                Mecanico <input type="text" [formControlName]="i">
+            </label>
+        </div>
+        <button (click)="agregarMecanico()">Asignar un Mecanico</button>
+    </div>
+
+    <button type ="submit">Guardar</button>
+
+</form>
