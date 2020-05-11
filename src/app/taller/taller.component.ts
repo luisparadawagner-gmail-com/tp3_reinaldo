@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TallerComponent implements OnInit {
 
+  tallerPadre: string = 'Mecanica Neuquen SRL'
+
   constructor() { }
 
   ngOnInit(): void {
