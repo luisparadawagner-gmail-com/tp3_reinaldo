@@ -20,6 +20,8 @@
         </label>
     </div>
 
+    <p>Kilometraje del motor: {{motor.kilometraje}}</p>
+
     <div formArrayName="mecanicosACargo">
         <h3>Mecanicos a cargo del Servicio</h3>
         <div *ngFor="let mecanico of mecanicosACargo.controls; let i = index" class="mecanicosACargo">
@@ -29,6 +31,7 @@
         </div>
         <button (click)="agregarMecanico()">Asignar un Mecanico</button>
     </div>
+    
 
     <button type ="submit">Guardar</button>
 

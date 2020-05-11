@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import {Motor} from './../automovil/motor/Motor'
+
 import { FormControl,FormGroup,FormBuilder,Validator,Validators,FormArray } from '@angular/forms';
 @Component({
   selector: 'app-automovil',
@@ -44,5 +46,7 @@ export class AutomovilComponent {
 
     this.automovilForm.patchValue({año:2016});
   };
+
+  motor : Motor = { kilometraje: 43500}
 
 }
