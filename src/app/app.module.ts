@@ -6,11 +6,15 @@ import { AppComponent } from './app.component';
 import { AutomovilComponent } from './automovil/automovil.component';
 
 import {ReactiveFormsModule, FormsModule} from '@angular/forms';
+import { MecanicoComponent } from './mecanico/mecanico.component';
+import { TallerComponent } from './taller/taller.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AutomovilComponent
+    AutomovilComponent,
+    MecanicoComponent,
+    TallerComponent
   ],
   imports: [
     BrowserModule,
