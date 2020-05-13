@@ -9,6 +9,8 @@ import { FormControl,FormGroup,FormBuilder,Validator,Validators,FormArray } from
 })
 export class AutomovilComponent {
 
+  checked = false;
+
   constructor(private fb: FormBuilder) { }
 
   automovilForm = this.fb.group({
