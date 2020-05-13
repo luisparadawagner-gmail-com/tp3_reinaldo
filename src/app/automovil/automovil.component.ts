@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 import {Motor} from './../automovil/motor/Motor'
 
 import { FormControl,FormGroup,FormBuilder,Validator,Validators,FormArray } from '@angular/forms';

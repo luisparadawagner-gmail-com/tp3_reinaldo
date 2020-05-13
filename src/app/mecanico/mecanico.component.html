@@ -2,5 +2,15 @@
 
 <p>Variable tallerHijo: {{tallerHijo}}</p>
 
-<input [formControl]="dia">
+<form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Escriba el dia</mat-label>
+      <input [formControl]="dia" matInput >
+    </mat-form-field>
+</form>
+
 <button (click)="decirHorario(dia)">Horario de atencion</button>
+
+
+
+

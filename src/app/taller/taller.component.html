@@ -12,17 +12,24 @@
 
 <div>
     <h4>Two way Data Binding</h4>
-
-    <input [(ngModel)]="cliente">
     <!-- Aca usamos pipes con uppercase-->
-    <p>{{cliente | uppercase}} </p>
+    
+    <mat-form-field class="example-form-field">
+        <mat-label>Ingresar nombre cliente</mat-label>
+        <input matInput [(ngModel)]="cliente">
+        <button mat-button *ngIf="cliente" matSuffix mat-icon-button aria-label="Clear" (click)="cliente=''">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <p>{{cliente | uppercase}} </p>
 </div>
 
-<ul>
+<ul *ngIf=true>
     <li *ngFor="let motor of motores">
         <!-- Directiva *ngFor que itera sobre el array -->
         Tipo de Motor: {{motor.tipo | lowercase}}
-        Kilometraje: {{motor.kilometraje | uppercase}}
+        Kilometraje: {{motor.kilometraje}}
     </li>
 </ul>
 

@@ -1,23 +1,34 @@
 <p>Ficha de Carga -Automovil-</p>
 <form [formGroup]='automovilForm' (ngSubmit)=submit()>
 
+    
+
     <div class="datosAutomovil">
-        <label>Marca 
-            <input type="text" formControlName="marca">
-        </label>
-        <label>Año 
-            <input type="text" formControlName="año">
-        </label>
+        <mat-form-field appearance="fill">
+            <mat-label>Marca</mat-label>
+            <input type="text" formControlName="marca" matInput>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Año</mat-label>
+            <input type="text" formControlName="año" matInput>
+          </mat-form-field>
+       
     </div>
 
     <div formGroupName="datosTecnicos" class="datosTecnicos">
         <h3>Datos Tecnicos</h3>
-        <label>Funcionando
-            <input type="text" formControlName="enMarcha">
-        </label>
-        <label> Ultimo Servicio 
-            <input type ="text" formControlName="ultimoServicio">
-        </label>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Vehiculo Funcionando?</mat-label>
+            <input type="text" formControlName="enMarcha" matInput>
+          </mat-form-field>
+           
+            <mat-form-field appearance="fill">
+                <mat-label>Ultimo Servicio</mat-label>
+                <input type="text" formControlName="ultimoServicio" matInput>
+              </mat-form-field>
+       
     </div>
 
     <!-- Uso de interpolacion-->
@@ -32,9 +43,9 @@
                 Mecanico <input type="text" [formControlName]="i">
             </label>
         </div>
-        <button (click)="agregarMecanico()" type ="button">Asignar un Mecanico</button>
+        <button (click)="agregarMecanico()" type ="button" mat-button>Asignar un Mecanico</button>
     </div>
 
-    <button type ="submit">Guardar</button>
+    <button type ="submit" mat-raised-button color="primary">Guardar</button>
 
 </form>
