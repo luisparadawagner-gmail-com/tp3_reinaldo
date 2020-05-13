@@ -8,6 +8,7 @@ import { AutomovilComponent } from './automovil/automovil.component';
 import {ReactiveFormsModule, FormsModule} from '@angular/forms';
 import { MecanicoComponent } from './mecanico/mecanico.component';
 import { TallerComponent } from './taller/taller.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { TallerComponent } from './taller/taller.component';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
