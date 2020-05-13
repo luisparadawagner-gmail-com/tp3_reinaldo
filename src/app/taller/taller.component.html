@@ -1,3 +1,31 @@
-<p>taller works!</p>
+<p>Informe de -Taller Works-</p>
 
-<app-mecanico [tallerHijo]="tallerPadre"></app-mecanico>
+<div>
+    <h4>Property Binding</h4>
+    <img [src]="fotoTaller" [title]="tooltip" [width]="anchoImg" [height]="altoImg">
+</div>
+
+<div>
+    <h4>Event Binding</h4>
+    <button (click)="verMotor(motorPrueba)">Ver Motor en servicio</button>
+</div>
+
+<div>
+    <h4>Two way Data Binding</h4>
+
+    <input [(ngModel)]="cliente">
+    <!-- Aca usamos pipes con uppercase-->
+    <p>{{cliente | uppercase}} </p>
+</div>
+
+<ul>
+    <li *ngFor="let motor of motores">
+        <!-- Directiva *ngFor que itera sobre el array -->
+        Tipo de Motor: {{motor.tipo | lowercase}}
+        Kilometraje: {{motor.kilometraje | uppercase}}
+    </li>
+</ul>
+
+<app-mecanico [tallerHijo]="tallerPadre" (horario)="onHorario($event)"></app-mecanico>
+
+El horario de atencion es: {{horario}}

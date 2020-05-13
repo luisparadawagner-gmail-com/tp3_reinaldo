@@ -1,4 +1,4 @@
-<p>automovil works!</p>
+<p>Ficha de Carga -Automovil-</p>
 <form [formGroup]='automovilForm' (ngSubmit)=submit()>
 
     <div class="datosAutomovil">
@@ -20,7 +20,10 @@
         </label>
     </div>
 
+    <!-- Uso de interpolacion-->
+    <p>Tipo de motor: {{motor.tipo}}</p>
     <p>Kilometraje del motor: {{motor.kilometraje}}</p>
+
 
     <div formArrayName="mecanicosACargo">
         <h3>Mecanicos a cargo del Servicio</h3>
@@ -29,7 +32,7 @@
                 Mecanico <input type="text" [formControlName]="i">
             </label>
         </div>
-        <button (click)="agregarMecanico()">Asignar un Mecanico</button>
+        <button (click)="agregarMecanico()" type ="button">Asignar un Mecanico</button>
     </div>
 
     <button type ="submit">Guardar</button>

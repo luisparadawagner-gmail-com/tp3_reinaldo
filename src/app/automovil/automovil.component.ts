@@ -34,6 +34,7 @@ export class AutomovilComponent {
 
   submit() {
 
+    //Datos tipo string, number, boolean y date, uso de setvalue
     this.automovilForm.setValue({
       marca: 'Volskwagen',
       año: 2015,
@@ -43,10 +44,11 @@ export class AutomovilComponent {
       },
       mecanicosACargo: ['']
     })
-
+    //uso de patchvalue
     this.automovilForm.patchValue({año:2016});
   };
 
-  motor : Motor = { kilometraje: 43500}
+  //Clase
+  motor : Motor = {tipo: 'naftero', kilometraje: 43500}
 
 }
